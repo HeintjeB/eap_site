@@ -1,0 +1,12 @@
+details[open] .summary-text {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+#medium:hover+.hide {
+    display: block;
+    color: black;
+}
