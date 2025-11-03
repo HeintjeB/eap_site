@@ -10,3 +10,25 @@ details[open] .summary-text {
     display: block;
     color: black;
 }
+
+.slice {
+    stroke: none;
+}
+
+.s1 {
+    fill: #AB9C59;
+}
+
+.s2, .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12 {
+    fill: #101B30;
+}
+
+.cover_text { 
+    opacity: 0; 
+    transition: opacity 300ms ease-in-out; 
+}
+
+.ct_visible {
+     opacity: 1;
+     transition: opacity 300ms ease-in-out; 
+}
