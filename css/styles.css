@@ -32,3 +32,64 @@ details[open] .summary-text {
      opacity: 1;
      transition: opacity 300ms ease-in-out; 
 }
+
+/* starttoestand: onzichtbaar tot JS 'is-visible' zet */
+[data-reveal] {
+  opacity: 0;
+  transform: translate(
+    var(--horizontal, 0),
+    var(--vertical, 20px)
+  ) scale(var(--scale, 1));
+  transition:
+    opacity var(--duration, .8s) var(--easing, cubic-bezier(.2,.65,.2,1)) var(--delay, 0s),
+    transform var(--duration, .8s) var(--easing, cubic-bezier(.2,.65,.2,1)) var(--delay, 0s),
+    clip-path var(--duration, .8s) var(--easing, cubic-bezier(.2,.65,.2,1)) var(--delay, 0s);
+  will-change: opacity, transform, clip-path;
+}
+
+/* eindtoestand */
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
+}
+
+/* varianten (optioneel) */
+[data-reveal="image-fade"] {
+  --scale: 1.02;
+  clip-path: inset(10% 0 10% 0 round 8px);
+}
+[data-reveal="image-fade"].is-visible {
+  clip-path: inset(0 0 0 0 round 8px);
+}
+
+[data-reveal="text"] {
+  --vertical: 8px;
+  letter-spacing: .2px;
+}
+
+[data-reveal="fade"] {
+  /* default variant; je kunt hier niets nodig hebben */
+}
+
+/* stagger-kinderen beginnen onzichtbaar */
+[data-reveal="stagger"] > * {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity var(--duration, .6s) var(--easing, cubic-bezier(.2,.65,.2,1)),
+    transform var(--duration, .6s) var(--easing, cubic-bezier(.2,.65,.2,1));
+}
+[data-reveal="stagger"].is-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* respecteer voorkeursinstelling 'reduced motion' */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal="stagger"] > * {
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
