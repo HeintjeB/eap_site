@@ -100,6 +100,10 @@
         opacity: 1;
     }
 
+    .no-scroll {
+    overflow: hidden;
+    height: 100vh;
+}
     /* --- UTILITIES --- */
     .line-clamp-3 {
         overflow: hidden;
@@ -142,7 +146,7 @@
 </style>
 </head>
 
-<body class="flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen no-scroll">
 
     
 
@@ -217,7 +221,7 @@
 
             <div class="p-10 border-b border-[#AB9C59]/30 relative">
                 <h2 class="text-xs sm:text-sm tracking-[0.2em] font-bold title-font text-[#AB9C59] mb-6 uppercase text-center">
-                    Fundament leggen voor automatisering
+                    Fundament voor automatisering
                 </h2>
                 <p class="mx-auto leading-relaxed text-base text-gray-300 text-left">
                 Onderstaand is beschreven wat het fundament moet zijn om makkelijk processen te digitaliserenen en/of automatiseren:
@@ -234,8 +238,8 @@
                 
                 <div class="flex flex-col divide-y divide-[#AB9C59]/20">
 
-                    <div class="flex flex-col sm:flex-row items-start py-8 first:pt-0 group">
-                        <div class="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-[#AB9C59]/10 border border-[#AB9C59]/30 text-[#AB9C59] mb-4 sm:mb-0 sm:mr-6 group-hover:bg-[#AB9C59] group-hover:text-white transition-colors duration-300">
+                    <div class="flex flex-row sm:flex-row items-start py-8 first:pt-0 group">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-[#AB9C59]/10 border border-[#AB9C59]/30 text-[#AB9C59] mb-4 sm:mb-0 sm:mr-6 group-hover:bg-[#AB9C59] group-hover:text-white transition-colors duration-300 hidden lg:flex">
                              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="w-7 h-7" viewBox="0 0 24 24">
                                 <path d="M20 20C20.5523 20 21 19.5523 21 19C21 18.4477 20.5523 18 20 18C19.4477 18 19 18.4477 19 19C19 19.5523 19.4477 20 20 20ZM17 19C17 17.6938 17.8348 16.5825 19 16.1707V16C19 14.3431 17.6569 13 16 13C14.8744 13 13.8357 12.6281 13 12.0004L13 16.1707C14.1652 16.5825 15 17.6938 15 19C15 20.6569 13.6569 22 12 22C10.3431 22 9 20.6569 9 19C9 17.6938 9.83481 16.5825 11 16.1707L11 12.0004C10.1643 12.6281 9.12561 13 8 13C6.34315 13 5 14.3431 5 16V16.1707C6.16519 16.5825 7 17.6938 7 19C7 20.6569 5.65685 22 4 22C2.34315 22 1 20.6569 1 19C1 17.6938 1.83481 16.5825 3 16.1707V16C3 13.2386 5.23858 11 8 11C9.65685 11 11 9.65685 11 8V7.82929C9.83481 7.41746 9 6.30622 9 5C9 3.34315 10.3431 2 12 2C13.6569 2 15 3.34315 15 5C15 6.30622 14.1652 7.41746 13 7.82929V8C13 9.65685 14.3431 11 16 11C18.7614 11 21 13.2386 21 16V16.1707C22.1652 16.5825 23 17.6938 23 19C23 20.6569 21.6569 22 20 22C18.3431 22 17 20.6569 17 19ZM12 6C12.5523 6 13 5.55228 13 5C13 4.44772 12.5523 4 12 4C11.4477 4 11 4.44772 11 5C11 5.55228 11.4477 6 12 6ZM4 18C3.44772 18 3 18.4477 3 19C3 19.5523 3.44772 20 4 20C4.55228 20 5 19.5523 5 19C5 18.4477 4.55228 18 4 18ZM13 19C13 19.5523 12.5523 20 12 20C11.4477 20 11 19.5523 11 19C11 18.4477 11.4477 18 12 18C12.5523 18 13 18.4477 13 19Z"></path>
                             </svg>
@@ -243,7 +247,7 @@
                         <div class="flex-grow">
                             <h2 class="font-bold title-font mb-2 text-xl text-[#AB9C59]">Basic Business Process</h2>
                             <p class="leading-relaxed text-gray-300">Om winstgevend te zijn, zijn bepaalde handelingen noodzakelijk. Denk bijvoorbeeld aan het opstellen en versturen van facturen. Dit vormt de absolute basis — en het is belangrijk dat de gegevens hierbij correct zijn ingericht. EaP kan helpen bij het definiëren van de ideale bedrijfsprocessen en -structuur.</p>
-                            <p class="text-sm italic text-gray-500 mt-2 pl-3 border-l-2 border-[#AB9C59] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-sm italic text-gray-500 mt-2 pl-3 border-l-2 border-[#AB9C59] lg:opacity-0 lg:group-hover:opacity-100 transition-opacity lg:duration-300">
                                 Elk artikel krijgt een artikelnummer
                             </p>
                         
@@ -251,7 +255,7 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-start py-8 group">
-                        <div class="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-[#AB9C59]/10 border border-[#AB9C59]/30 text-[#AB9C59] mb-4 sm:mb-0 sm:mr-6 group-hover:bg-[#AB9C59] group-hover:text-white transition-colors duration-300">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-[#AB9C59]/10 border border-[#AB9C59]/30 text-[#AB9C59] mb-4 sm:mb-0 sm:mr-6 group-hover:bg-[#AB9C59] group-hover:text-white transition-colors duration-300 hidden lg:flex">
                             <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-7 h-7" viewBox="0 0 24 24">
                                 <path d="M3 13.6493C3 16.6044 5.41766 19 8.4 19L16.5 19C18.9853 19 21 16.9839 21 14.4969C21 12.6503 19.8893 10.9449 18.3 10.25C18.1317 7.32251 15.684 5 12.6893 5C10.3514 5 8.34694 6.48637 7.5 8.5C4.8 8.9375 3 11.2001 3 13.6493Z"></path>
                             </svg>
@@ -259,7 +263,7 @@
                         <div class="flex-grow">
                             <h2 class="font-bold title-font mb-2 text-xl text-[#AB9C59]">Inrichten van je ERP</h2>
                             <p class="leading-relaxed text-gray-300">Het implementeren van een ERP-systeem is in essentie het digitaliseren van je bedrijfsprocessen. Omdat je meestal maar één keer de kans krijgt om je systeem goed in te richten, is het cruciaal om dit zorgvuldig aan te pakken. </p>
-                            <p class="text-sm italic text-gray-500 mt-2 pl-3 border-l-2 border-[#AB9C59] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-sm italic text-gray-500 mt-2 pl-3 border-l-2 border-[#AB9C59] lg:opacity-0 lg:group-hover:opacity-100 transition-opacity lg:duration-300">
                             Het artikelnummer is verplicht om in het ERP-systeem voorraad te kunnen registreren.
                             </p>
                         
@@ -267,13 +271,13 @@
                     </div>
 
                     <div class="flex flex-col sm:flex-row items-start py-8 last:pb-0 group">
-                        <div class="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-[#AB9C59]/10 border border-[#AB9C59]/30 text-[#AB9C59] mb-4 sm:mb-0 sm:mr-6 group-hover:bg-[#AB9C59] group-hover:text-white transition-colors duration-300">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-[#AB9C59]/10 border border-[#AB9C59]/30 text-[#AB9C59] mb-4 sm:mb-0 sm:mr-6 group-hover:bg-[#AB9C59] group-hover:text-white transition-colors duration-300 hidden lg:flex">
                             <i data-lucide="database"></i>  
                         </div>
                         <div class="flex-grow">
                             <h4 class="font-bold title-font mb-2 text-xl text-[#AB9C59]">Databeheer voor automatisering</h4>
                             <p class="leading-relaxed text-gray-300">Als de basis processen en het ERP zijn ingericht dan geanalyseerd worden of de data compleet genoeg is voor automatisering. Ook kunnen er extra parameters toegevoegd worden om vervolg analyses te doen. </p>
-                            <p class="text-sm italic text-gray-500 mt-2 pl-3 border-l-2 border-[#AB9C59] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-sm italic text-gray-500 mt-2 pl-3 border-l-2 border-[#AB9C59] lg:opacity-0 lg:group-hover:opacity-100 transition-opacity lg:duration-300">
                                 Het toevoegen van een ABC-classificering aan artikelnummers ten behoeve van voorraadbeheer.
                             </p>
                         
@@ -287,7 +291,7 @@
     </div>
 </section>
 
-<section class="body-font font-sans px-4 mb-48" data-reveal="fade" style="--delay: 0.2s;">
+<section class="body-font font-sans px-4 lg:mb-48 mb-8" data-reveal="fade" style="--delay: 0.2s;">
     <div class="container px-5 mx-auto">
 
         <div class="glass-card flex flex-col w-full mx-auto lg:w-2/3 rounded-2xl overflow-visible">
@@ -401,7 +405,7 @@
     </div>
 </section>
     </div>
-      <footer class="w-full body-font border-t border-[#303552] mt-8 md:fixed md:bottom-0 md:left-0 md:right-0 md:mt-0">
+      <footer class="w-full body-font border-t border-[#303552] mt-8 md:fixed md:bottom-0 md:left-0 md:right-0 md:mt-0" data-reveal="fade" style="--delay: 0.2s;">
 <div class="h-1/6 container px-5 py-8 mx-auto
             flex flex-row flex-nowrap
             items-center
@@ -957,8 +961,10 @@
                     // 3. Reveal the main content
                     if(document.getElementById('main_content')) {
                         // Reduced delay from 500 to 400 for a snappier feel
+                        
                         setTimeout(() => {
                             document.getElementById('main_content').classList.replace('content-hidden', 'content-visible');
+                            document.body.classList.remove('no-scroll');
                         }, 400); 
                     }
                 }
